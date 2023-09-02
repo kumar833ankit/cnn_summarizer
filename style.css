@@ -1,0 +1,686 @@
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #212121;
+  background-image: url('background-image1.jpg')!important ;
+  color: #fff;
+  font-family: monospace, serif;
+  letter-spacing: 0.05em;
+}
+
+h1 {
+  font-size: 23px;
+}
+
+.form {
+  width: 300px;
+  padding: 64px 15px 24px;
+  margin: 0 auto;
+}
+.form .control {
+  margin: 0 0 24px;
+}
+.form .control input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-family: monospace, serif;
+  letter-spacing: 0.05em;
+  font-size: 16px;
+}
+.form .control input:hover, .form .control input:focus {
+  outline: none;
+  border: 0;
+}
+.form .btn {
+  width: 100%;
+  display: block;
+  padding: 14px 16px;
+  background: transparent;
+  outline: none;
+  border: 0;
+  color: #fff;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 16px;
+}
+
+.block-cube {
+  position: relative;
+}
+.block-cube .bg-top {
+  position: absolute;
+  height: 10px;
+  background: #020024;
+  background: linear-gradient(90deg, #020024 0%, #340979 37%, #00d4ff 94%);
+  bottom: 100%;
+  left: 5px;
+  right: -5px;
+  transform: skew(-45deg, 0);
+  margin: 0;
+}
+.block-cube .bg-top .bg-inner {
+  bottom: 0;
+}
+.block-cube .bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #020024;
+  background: linear-gradient(90deg, #020024 0%, #340979 37%, #00d4ff 94%);
+}
+.block-cube .bg-right {
+  position: absolute;
+  background: #020024;
+  background: #00d4ff;
+  top: -5px;
+  z-index: 0;
+  bottom: 5px;
+  width: 10px;
+  left: 100%;
+  transform: skew(0, -45deg);
+}
+.block-cube .bg-right .bg-inner {
+  left: 0;
+}
+.block-cube .bg .bg-inner {
+  transition: all 0.2s ease-in-out;
+}
+.block-cube .bg-inner {
+  background: #212121;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  right: 2px;
+  bottom: 2px;
+}
+.block-cube .text {
+  position: relative;
+  z-index: 2;
+}
+.block-cube.block-input input {
+  position: relative;
+  z-index: 2;
+}
+.block-cube.block-input input:focus ~ .bg-right .bg-inner, .block-cube.block-input input:focus ~ .bg-top .bg-inner, .block-cube.block-input input:focus ~ .bg-inner .bg-inner {
+  top: 100%;
+  background: rgba(255, 255, 255, 0.5);
+}
+.block-cube.block-input .bg-top,
+.block-cube.block-input .bg-right,
+.block-cube.block-input .bg {
+  background: rgba(255, 255, 255, 0.5);
+  transition: background 0.2s ease-in-out;
+}
+.block-cube.block-input .bg-right .bg-inner,
+.block-cube.block-input .bg-top .bg-inner {
+  transition: all 0.2s ease-in-out;
+}
+.block-cube.block-input:focus .bg-top,
+.block-cube.block-input:focus .bg-right,
+.block-cube.block-input:focus .bg, .block-cube.block-input:hover .bg-top,
+.block-cube.block-input:hover .bg-right,
+.block-cube.block-input:hover .bg {
+  background: rgba(255, 255, 255, 0.8);
+}
+.block-cube.block-cube-hover:focus .bg .bg-inner, .block-cube.block-cube-hover:hover .bg .bg-inner {
+  top: 100%;
+}
+
+.credits {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 15px 15px;
+  width: 100%;
+  z-index: 111;
+}
+.credits a {
+  opacity: 0.6;
+  color: #fff;
+  font-size: 11px;
+  text-decoration: none;
+}
+.credits a:hover {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  /* background-image: url('background-image.gif'); */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.glassmorphism-container {
+  background: rgba(255, 255, 255, 0.1); 
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.glassmorphism-card {
+  background: rgba(255, 255, 255, 0.2); 
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+  color: #fff;
+  overflow: auto;
+}
+#inputText,
+#input-form button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#inputText {
+  resize: none; 
+}
+
+#input-form button {
+  cursor: pointer;
+}
+
+/* Adjust styles for the output container */
+#glassmorphism-container {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+  color: #fff;
+  overflow: auto;
+  margin-top: 20px;
+}
+
+/* Style for the input field and button */
+#inputText {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  resize: none; /* Prevent textarea from being resized by users */
+}
+
+#input-form button {
+  background: rgba(86, 135, 248, 0.2); 
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px; /* Adjust padding as needed */
+  margin-top: 10px;
+  color: #fff; /* Text color */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add a smooth transition on hover */
+}
+
+#input-form button:hover {
+  background: rgba(142, 12, 12, 0.3)!important; /* Slightly lighter background on hover */
+  color: #000000!important; /* Change text color on hover */
+}
+
+
+#input-form button {
+  background: rgba(3, 29, 89, 0.2); 
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px; 
+  margin-top: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+}
+
+#input-form button:hover {
+  background: rgba(4, 22, 109, 0.879)!important; 
+  color: #e0dcdc!important; 
+}
+
+
+
+/* ... Your existing CSS rules ... */
+
+/* Highlight the input text field */
+#inputText:focus {
+  border: 2px solid #03D804; /* Change the border color when focused */
+  outline: none; /* Remove the default focus outline */
+}
+
+/* Make the glassmorphism slightly darker */
+.glassmorphism-container {
+  background: rgba(255, 255, 255, 0.15); /* Adjust the alpha (opacity) value to make it slightly darker */
+  /* ... Your existing styles ... */
+}
+
+/* ... Your existing CSS rules ... */
+
+/* Update the button color */
+#input-form button {
+  background: rgba(3, 29, 89, 0.2); /* Updated button background color */
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Update the button color on hover */
+#input-form button:hover {
+  background: rgba(4, 22, 109, 0.879)!important; /* Updated button background color on hover */
+  color: #e0dcdc!important; /* Updated text color on hover */
+}
+
+/* ... Your existing CSS rules ... */
+
+
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #212121;
+  color: #fff;
+  font-family: monospace, serif;
+  letter-spacing: 0.05em;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+h1 {
+  font-size: 23px;
+}
+
+.form {
+  width: 300px;
+  padding: 64px 15px 24px;
+  margin: 0 auto;
+}
+
+.form .control {
+  margin: 0 0 24px;
+}
+
+.form .control input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-family: monospace, serif;
+  letter-spacing: 0.05em;
+  font-size: 16px;
+}
+
+.form .control input:hover,
+.form .control input:focus {
+  outline: none;
+  border: 0;
+}
+
+/* Darken and highlight the input placeholder */
+#inputText::placeholder {
+  color: rgba(255, 255, 255, 0.6); /* Darker placeholder color */
+  font-weight: bold; /* Highlight the placeholder */
+}
+
+.form .btn {
+  width: 100%;
+  display: block;
+  padding: 14px 16px;
+  background: transparent;
+  outline: none;
+  border: 0;
+  color: #fff;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 16px;
+}
+
+.block-cube {
+  position: relative;
+}
+
+.block-cube .bg-top {
+  position: absolute;
+  height: 10px;
+  background: #020024;
+  background: linear-gradient(90deg, #020024 0%, #340979 37%, #00d4ff 94%);
+  bottom: 100%;
+  left: 5px;
+  right: -5px;
+  transform: skew(-45deg, 0);
+  margin: 0;
+}
+
+.block-cube .bg-top .bg-inner {
+  bottom: 0;
+}
+
+.block-cube .bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #020024;
+  background: linear-gradient(90deg, #020024 0%, #340979 37%, #00d4ff 94%);
+}
+
+.block-cube .bg-right {
+  position: absolute;
+  background: #020024;
+  background: #00d4ff;
+  top: -5px;
+  z-index: 0;
+  bottom: 5px;
+  width: 10px;
+  left: 100%;
+  transform: skew(0, -45deg);
+}
+
+.block-cube .bg-right .bg-inner {
+  left: 0;
+}
+
+.block-cube .bg .bg-inner {
+  transition: all 0.2s ease-in-out;
+}
+
+.block-cube .bg-inner {
+  background: #212121;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  right: 2px;
+  bottom: 2px;
+}
+
+.block-cube .text {
+  position: relative;
+  z-index: 2;
+}
+
+.block-cube.block-input input {
+  position: relative;
+  z-index: 2;
+}
+
+.block-cube.block-input input:focus ~ .bg-right .bg-inner,
+.block-cube.block-input input:focus ~ .bg-top .bg-inner,
+.block-cube.block-input input:focus ~ .bg-inner .bg-inner {
+  top: 100%;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.block-cube.block-input .bg-top,
+.block-cube.block-input .bg-right,
+.block-cube.block-input .bg {
+  background: rgba(255, 255, 255, 0.5);
+  transition: background 0.2s ease-in-out;
+}
+
+.block-cube.block-input .bg-right .bg-inner,
+.block-cube.block-input .bg-top .bg-inner {
+  transition: all 0.2s ease-in-out;
+}
+
+.block-cube.block-input:focus .bg-top,
+.block-cube.block-input:focus .bg-right,
+.block-cube.block-input:focus .bg,
+.block-cube.block-input:hover .bg-top,
+.block-cube.block-input:hover .bg-right,
+.block-cube.block-input:hover .bg {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.block-cube.block-cube-hover:focus .bg .bg-inner,
+.block-cube.block-cube-hover:hover .bg .bg-inner {
+  top: 100%;
+}
+
+.credits {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 15px 15px;
+  width: 100%;
+  z-index: 111;
+}
+
+.credits a {
+  opacity: 0.6;
+  color: #fff;
+  font-size: 11px;
+  text-decoration: none;
+}
+
+.credits a:hover {
+  opacity: 1;
+}
+
+/* Make the glassmorphism-container slightly darker */
+.glassmorphism-container {
+  background: rgba(255, 255, 255, 0.2); /* Darker background */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.glassmorphism-card {
+  background: rgba(255, 255, 255, 0.2); /* Darker background */
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+  color: #fff;
+  overflow: auto;
+  max-width: 100%; /* Ensure responsiveness */
+  overflow: hidden; /* Hide overflow content */
+}
+
+#inputText,
+#input-form button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#inputText {
+  resize: none;
+}
+
+#input-form button {
+  cursor: pointer;
+}
+
+/* Adjust styles for the output container */
+#glassmorphism-container {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+  color: #fff;
+  overflow: auto;
+  margin-top: 20px;
+}
+
+/* Style for the input field and button */
+#inputText {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  resize: none; /* Prevent textarea from being resized by users */
+}
+
+/* Darken and highlight the input placeholder */
+#inputText::placeholder {
+  color: rgba(255, 255, 255, 0.6); /* Darker placeholder color */
+  font-weight: bold; /* Highlight the placeholder */
+}
+
+#input-form button {
+  background: rgba(3, 29, 89, 0.2); /* Updated button background color */
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  color: #fff; /* Text color */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add a smooth transition on hover */
+}
+
+#input-form button:hover {
+  background: rgba(4, 22, 109, 0.879)!important; /* Updated button background color on hover */
+  color: #e0dcdc!important; /* Updated text color on hover */
+}
+
+
+/* ... Your existing CSS rules ... */
+
+/* Darken and highlight the input placeholder */
+#inputText::placeholder {
+  color: rgba(0, 0, 0, 0.603); /* Darker placeholder color */
+  font-weight: bold; /* Highlight the placeholder */
+}
+
+/* Make the glassmorphism-container slightly darker */
+.glassmorphism-container {
+  background: rgba(255, 255, 255, 0.2); 
+  max-width: 100%;
+  overflow: hidden; /* Hide overflow content */
+  word-wrap: break-word; /* Wrap long lines of text */
+  white-space: normal; /* Prevent text from overflowing the container */
+  display: flex;
+  flex-direction: column; /* Display content vertically */
+  align-items: center; /* Center content horizontally */
+/* Darker background */
+  /* ... Your existing styles ... */
+}
+
+/* Ensure responsiveness and prevent overflow */
+.glassmorphism-card {
+  background: rgba(234, 16, 16, 0.2);
+  max-width: 100%; /* Ensure the card doesn't stretch beyond the viewport */
+  overflow: hidden; /* Hide overflow content if it exceeds the card's boundaries */
+}
+
+/* ... Your existing CSS rules ... */
+
+
+/* ... Your existing CSS rules ... */
+
+/* Ensure responsiveness and prevent overflow */
+.glassmorphism-card {
+  max-width: 100%;
+  overflow: hidden; /* Hide overflow content */
+  word-wrap: break-word; /* Wrap long lines of text */
+  white-space: normal; /* Prevent text from overflowing the container */
+}
+
+/* ... Your existing CSS rules ... */
+
+
+
+
+
+
+
+
+
+
+
+
+.glassmorphism-container {
+  background: rgba(255, 255, 255, 0.2); 
+  max-width: 50%;
+  overflow: hidden; 
+  word-wrap: break-word; 
+  white-space: normal; 
+  /*display: flex !important;*/
+  flex-direction: column; 
+  align-items: center;
+}
+
+.glassmorphism-card {
+  background: rgba(234, 16, 16, 0.2) !important;
+  max-width: 100%; 
+  overflow: hidden ;
+  display: flex !important;
+}
+
+
